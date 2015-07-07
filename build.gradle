@@ -16,6 +16,8 @@ repositories {
 dependencies {
     compile 'ch.qos.logback:logback-classic:1.1.2'
     compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.0.1.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.0.1.RELEASE'
     compile 'jstl:jstl:1.2'
     compile(group: 'commons-lang', name: 'commons-lang', version: '2.6')
     compile(group: 'commons-io', name: 'commons-io', version: '1.4')
@@ -25,8 +27,8 @@ dependencies {
     compile 'javax.servlet:javax.servlet-api:3.0.1'
 }
 
-task deploy(type: Copy) {
+task deploy(type: Copy, dependsOn: 'assemble') {
     from file('build/libs')
     include '*.war'
-    into "$tomcatDir/webapps"
+    into "$tomcatDir"
 }
