@@ -21,7 +21,7 @@ import java.util.Collections;
  */
 @Configuration
 @EnableWebSecurity
-public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * configureGlobal
@@ -51,7 +51,7 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/app/**").access("hasRole('ROLE_ADMIN')")
-                .and().formLogin().defaultSuccessUrl("/", false);
+                .and().formLogin().defaultSuccessUrl("/app/index.do", true);
 
     }
 }
