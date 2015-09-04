@@ -1,5 +1,7 @@
-package com.haulmont.mvc.config;
+package com.haulmont.mvc.config.web;
 
+import com.haulmont.mvc.config.app.AppConfig;
+import com.haulmont.mvc.config.root.RootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -10,7 +12,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{AppConfig.class};
+        return new Class[]{RootConfig.class};
     }
 
     @Override

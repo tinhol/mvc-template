@@ -1,4 +1,4 @@
-package com.haulmont.mvc.config;
+package com.haulmont.mvc.config.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 
