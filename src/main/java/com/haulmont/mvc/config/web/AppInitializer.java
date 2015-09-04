@@ -1,6 +1,5 @@
 package com.haulmont.mvc.config.web;
 
-import com.haulmont.mvc.config.app.AppConfig;
 import com.haulmont.mvc.config.root.RootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
